@@ -1,5 +1,5 @@
 //requiring the previously defined class, User
-const User = require('../Model/user');
+const User = require('./user');
 
 //defining a class for paying users
 class PayingUser extends User {
