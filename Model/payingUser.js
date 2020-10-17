@@ -3,9 +3,9 @@ const User = require('./user');
 
 //defining a class for paying users
 class PayingUser extends User {
-    constructor(firstName, lastName, age, userName, mail, password, interests, profilePic, paymentInfo) {
+    constructor(firstName, lastName, age, userName, mail, password, interests, profilePic, creditCardInfo) {
       super(firstName, lastName, age, userName, mail, password, interests, profilePic);
-      this.paymentInfo = paymentInfo;
+      this.creditCardInfo = creditCardInfo;
     }
 }
 
