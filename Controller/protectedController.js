@@ -1,10 +1,9 @@
 //requiring the jsonwebtoken
 var jwt = require('jsonwebtoken');
 
-//creating a function that verifies the token given.
-//if it matches the token created the user will recieve a message.
-function protectedController(req, res) {
-    //man kunne også tjekke her om token findes. 
+//creating a function that protects some information, in this case a message
+//if the token can be verified the message will be displayed
+function protectedController(req, res) { 
     jwt.verify(req.token, 'secretText', function(err, data){
         if(err){
             res.sendStatus(403);
